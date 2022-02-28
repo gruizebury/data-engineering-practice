@@ -1,14 +1,9 @@
-import requests
+import random
 
-download_uris = [
-    'https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2018_Q4.zip',
-    'https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2019_Q1.zip',
-    'https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2019_Q2.zip',
-    'https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2019_Q3.zip',
-    'https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2019_Q4.zip',
-    'https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2020_Q1.zip',
-    'https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2220_Q1.zip'
-]
+import requests
+from bs4 import BeautifulSoup
+
+download_uri = "https://www.ncei.noaa.gov/data/local-climatological-data/access/2021/"
 
 
 def main():
@@ -16,5 +11,5 @@ def main():
     pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
