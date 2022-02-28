@@ -12,7 +12,7 @@ from a `HTTP` source.
 2. Create a python environment and install the dependencies.
 
 3. There is a file called `main.py` in the `Exercise-1` directory, this
-is where you `Python` code to complete the exercise should go.
+   is where you `Python` code to complete the exercise should go.
 
 4. Once you have finished the project or want to test run your code,
    run the following command `python main.py` from inside the `Exercises/Exercise-1` directory
