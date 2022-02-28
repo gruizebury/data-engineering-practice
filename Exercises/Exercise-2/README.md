@@ -1,42 +1,43 @@
 ## Exercise #2 - WebScraping and File Downloading with Python.
 
-In this second exercise you will practice your Python skills again,
-we will extend upon the idea of downloading files from `HTTP` sources
-with Python, but add a twist.
+In this second exercise you will practice your Python analytic skills,
+we will extend upon the previous exercise and try to gather some insight
+based on the files we downloaded.
 
-You will have to "web scrap" a `HTML` page looking for a date, and identifying
-the correct file to build a URL with which you can download said file.
+You will have to provide the following information for the files you
+downloaded in the previous exercise:
 
+* Average `Sunrise` and `Sunset` value for your data set per station
+* Average `HourlyWindSpeed` per station for every 6 hour period
+
+Finally you'll need to export the concatenated dataset as a CSV for the next exercise.
 
 #### Setup
-1. Change directories at the command line 
-   to be inside the `Exercise-2` folder `cd Exercises/Exercise-2`
-   
-2. Run `docker build --tag=exercise-2 .` to build the `Docker` image.
+1. Change directories at the command line
+   to be inside the `Exercise-2` folder `cd Exercises/Exercise-2`.
+
+2. Copy the `downloads` folder from the previous exercise here either
+through python or manually.
 
 3. There is a file called `main.py` in the `Exercise-2` directory, this
 is where you `Python` code to complete the exercise should go.
-   
+
 4. Once you have finished the project or want to test run your code,
-   run the following command `docker-compose up run` from inside the `Exercises/Exercise-2` directory
+   run the following command `python main.py` from inside the `Exercises/Exercise-2` directory
 
 #### Problems Statement
-You need to download a file of weather data from a government website.
-files that are sitting at the following specified location.
+You need to gather some insight from the files downloaded in the previous exercise.
 
-https://www.ncei.noaa.gov/data/local-climatological-data/access/2021/
+You are looking for some particular metric about these files.
+Firstly you want to know what is the average sunrise and sunset time is for the year 2021
+for each particular station.
+You also want to know the average wind speed for each 6 hour period. For this you can split the
+day into 6 hour boxes and calculate the average of each box.
 
-You are looking for the file that was `Last Modified` on `2022-02-07 14:03`, you
-can't cheat and lookup the file number yourself. You must use Python to scrape
-this webpage, finding the corresponding file-name for this timestamp, `2022-02-07 14:03`
-
-Once you have obtained the correct file, and downloaded it, you must load the file
-into `Pandas` and find the record(s) with the highest `HourlyDryBulbTemperature`.
-Print these record(s) to the command line.
+Each file contains meteorological data for a given station gathered each 20 minutes. Each row
+contains the information gathered at that point in time. Please beware that not all rows have all columns populated.
 
 Generally, your script should do the following ...
-1. Attempt to web scrap/pull down the contents of `https://www.ncei.noaa.gov/data/local-climatological-data/access/2021/`
-2. Analyze it's structure, determine how to find the corresponding file to `2022-02-07 14:03` using Python.
-3. Build the `URL` required to download this file, and write the file locally.
-4. Open the file with `Pandas` and find the records with the highest `HourlyDryBulbTemperature`.
-5. Print this to stdout/command line/terminal.
+1. Concatenate all the files gathered in the previous exercise into a single pandas dataframe.
+2. Analyze the dataframe to extract the necessary metrics.
+3. Export the raw data dataframe for using it in the next exercise.

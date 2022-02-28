@@ -1,6 +1,6 @@
-import requests
-import pandas
+import glob
 
+import pandas as pd
 
 
 def main():
@@ -8,5 +8,5 @@ def main():
     pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
