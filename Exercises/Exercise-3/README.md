@@ -1,14 +1,13 @@
 ## Exercise #3 - Google Cloud Storage + Google Cloud Bigquery + Python.
 
-In this third exercise you will practice your Python skills again,
-we will extend upon the idea of working with files and start by 
-uploading data to a `google storage` cloud bucket on `gcp`.
+In this third exercise we will test your ability of working with 
+files on the cloud and your skills with sql.
 
-Working with the `Python` package `google-cloud-storage` to interact with `gcp` is very
-common, and this will ensure you get an introduction to that topic.
+The first thing you will do is work with the `Python` package `google-cloud-storage` 
+to interact with `gcp` and upload a file to a `storage bucket`.
 
 The next step will happen in `bigquery` where you must upload and query the data you uploaded
-to `storage` working with the `Python` package `google-cloud-bigquery`.
+to `storage` working with the `Python` package `google-cloud-bigquery` and doing some `sql`.
 
 You can add any extra packages you need to the requirements file and use them in your script.
 
@@ -25,11 +24,11 @@ You can add any extra packages you need to the requirements file and use them in
    run the following command `python main.py` from inside the `Exercises/Exercise-3` directory
 
 #### Problems Statement
-Your task is three-fold, upload the concatenated file you created in the previous Exercise to the
+Your task is three step task, upload the concatenated file you created in the previous Exercise to the
 bucket name we specified to you in the email.
 
-Once this file is uploaded to `storage` create a table under the dataset we told you in the email to
-`bigquery` and upload that csv file from `storage` to your brand new table.
+Once this file is uploaded to `storage` create a table under the `bigquery` dataset we told you in the email 
+and upload that csv file from `storage` to your brand new table.
 
 After that, create and execute a query that generates the same metrics we told you in the previous exercise
 and save those metrics to a new csv file.
